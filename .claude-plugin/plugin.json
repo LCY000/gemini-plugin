@@ -1,0 +1,12 @@
+{
+  "name": "gemini",
+  "version": "1.0.0",
+  "description": "Parallel sub-agent backed by Gemini CLI with live Google Search grounding. Free of Claude's quota.",
+  "author": "LCY000",
+  "skills": [
+    {
+      "name": "gemini",
+      "path": "../skills/gemini/SKILL.md"
+    }
+  ]
+}

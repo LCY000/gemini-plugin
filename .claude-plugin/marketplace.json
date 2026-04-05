@@ -1,0 +1,11 @@
+{
+  "name": "LCY000",
+  "owner": { "name": "LCY000" },
+  "plugins": [
+    {
+      "name": "gemini",
+      "source": ".",
+      "description": "Parallel sub-agent backed by Gemini CLI with live Google Search grounding. Free of Claude's quota."
+    }
+  ]
+}
