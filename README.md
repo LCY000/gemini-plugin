@@ -1,11 +1,11 @@
 # gemini-plugin
 
-A Claude Code plugin that adds a Gemini sub-agent with live Google Search grounding. Runs on your own Google account — completely independent of Claude's token budget.
+A Claude Code skill (distributed as a plugin) that adds a Gemini sub-agent with live Google Search grounding. Runs on your own Google account — completely independent of Claude's token budget.
 
 ## What it does
 
 - Triggers automatically for information queries: facts, current events, research, comparisons, prices, news, etc.
-- Uses `gemini-2.5-pro` with thinking + `google_web_search` internally
+- Uses whatever model you've configured in Gemini CLI (see below) with `google_web_search` internally
 - Falls back to Claude's WebSearch only when Gemini's result is insufficient or citable sources are needed
 
 ## Prerequisites
@@ -28,6 +28,16 @@ A Claude Code plugin that adds a Gemini sub-agent with live Google Search ground
 
 > **Note:** The skill assumes Gemini CLI is at `/opt/homebrew/bin/gemini` (Homebrew on macOS).  
 > If your path differs, edit `skills/gemini/scripts/call_gemini.sh` after installing.
+
+## Recommended: set your preferred model
+
+The skill uses whatever model is set as the default in your Gemini CLI config. To use the most capable model:
+
+```bash
+gemini
+```
+
+Go to **Settings → Model** and select your preferred model (e.g. `gemini-2.5-pro`). The skill will use it automatically from then on.
 
 ## Installation
 
